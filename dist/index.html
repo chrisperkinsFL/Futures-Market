@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="calc-logic.js"></script>
+  <title>Futures Market Calculator</title>
+</head>
+<body>
+
+<section class="flex-column-to-row">
+  <div class="calculator flex-row">
+      <div class="calc-content">
+      <span id="minT"></span>
+      <span id="tickV"></span>
+      
+      <select id="select" onchange="selectFunction()">
+        <option>Select an option</option>
+        <option value="0.10">Micro E-Mini Russel 2000</option>
+        <option value="0.25">Micro E-Mini Nasdaq-100</option>
+        <option value="0.25">Micro E-Mini S&P 500</option>
+        <option value="1">Micro E-Mini Dow</option>
+        <option value=".25">E-mini S&P 500 (ES) - Globex</option>
+        <option value="1">E-mini Dow (YM) - Globex</option>
+        <option value=".25">E-mini NASDAQ 100 (NQ) - Globex</option>  
+      </select>
+      
+      Entry Price (Buy) <input type="text" id="entryPrice"/>
+      Exit Price (Sell) <input type="text" id="exitPrice"/>
+      Number of contracts <input type="text" id="numContracts"/>
+        
+      <input type="button" name="Sumbit" value="calculate" onclick="addNumbers()"/>
+
+      Ticks <span id="ticks"></span>
+      Points <span id="points"></span>
+      USD<span id="usd"></span>
+    </div>
+  </div>
+    <div class="details">
+
+  </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,157 @@
+h1 {
+  font-size: calc(3rem + 1vw);
+}
+
+a {
+  text-decoration: none;
+}
+
+.db {
+  display: block;
+}
+
+a:focus,
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+.max-width {
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+input,
+select {
+  display: block;
+  margin: 0 0 1rem;
+}
+
+span {
+  display: block;
+}
+
+.details {
+  height: 100vh;
+  width: 50vw;
+  background: #24292e;
+}
+
+.calculator {
+  width: 50vw;
+  height: 100vh;
+  background: #F1F1F1;
+  align-self: center;
+}
+
+.calc-content {
+  align-self: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column-to-row {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .flex-column-to-row {
+    flex-direction: row;
+  }
+}
+
+.flex-row-to-column {
+  display: flex;
+  flex-direction: unset;
+}
+
+@media (min-width: 768px) {
+  .flex-row-to-column {
+    flex-direction: column;
+  }
+}
+
+.flex-1-12 {
+  flex: 1;
+}
+
+.flex-2-12 {
+  flex: 2;
+}
+
+.flex-3-12 {
+  flex: 3;
+}
+
+.flex-4-12 {
+  flex: 4;
+}
+
+.flex-5-12 {
+  flex: 5;
+}
+
+.flex-6-12 {
+  flex: 6;
+}
+
+.flex-7-12 {
+  flex: 7;
+}
+
+.flex-8-12 {
+  flex: 8;
+}
+
+.flex-9-12 {
+  flex: 9;
+}
+
+.flex-10-12 {
+  flex: 10;
+}
+
+.flex-11-12 {
+  flex: 11;
+}
+
+.flex-12-12 {
+  flex: 12;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/*# sourceMappingURL=style.css.map */
