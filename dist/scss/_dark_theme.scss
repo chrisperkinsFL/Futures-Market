@@ -1,0 +1,28 @@
+.entire-container{
+  padding: 1rem;
+  .results-container{
+    padding: 0 1rem;
+  }
+  .results-row{
+    padding: 1rem;
+    border-bottom: 1px solid #24292e;
+    &:last-child{
+      border-bottom: 0;
+    }
+    .label{
+      font-weight: 400;
+      color: $off-white;
+      font-size: .85rem;
+    }
+  }
+  
+  @media (min-width: $tablet){
+    
+  }
+  @media (min-width: $desktop){
+          
+  }
+  @media (min-width: $oversized-desktop){
+    
+  }
+}

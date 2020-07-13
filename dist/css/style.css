@@ -1,3 +1,8 @@
+body {
+  font-family: 'Lato', sans-serif;
+  background: #24292e;
+}
+
 h1 {
   font-size: calc(3rem + 1vw);
 }
@@ -33,22 +38,105 @@ span {
 }
 
 .details {
-  height: 100vh;
   width: 50vw;
+}
+
+input[type="text"] {
+  border: 0;
+  padding: .75rem;
+  background: #2e3841;
+  color: #F1F1F1;
+  width: 100%;
+}
+
+.input-label {
+  margin: 0 0 .5rem;
+  font-weight: 400;
+  color: #a1a1a1;
+  font-size: .85rem;
+}
+
+input[type="button"] {
+  background: #EA5948;
+  border: 0;
+  padding: 1rem;
+  width: 100%;
+  color: #F1F1F1;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  margin: .5rem 0;
+}
+
+input[type="button"]:hover {
+  background: #df4534;
+}
+
+select {
+  background: #2e3841;
+  border: 0;
+  outline: 0;
+  padding: 1rem .5rem;
+  color: #F1F1F1;
+}
+
+optgroup {
+  font-size: 1rem;
+}
+
+.results-container {
+  margin: 3.5rem 0 0;
+  background: #2e3841;
+  color: #F1F1F1;
+}
+
+.results-label-wrapper-heading {
+  width: 100%;
   background: #24292e;
+  padding: 1rem;
+  border: #2e3841 2px solid;
 }
 
-.calculator {
-  width: 50vw;
-  height: 100vh;
-  background: #F1F1F1;
-  align-self: center;
+.results-label-wrapper-heading span {
+  width: 50%;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-.calc-content {
-  align-self: center;
-  justify-content: center;
-  margin: 0 auto;
+.results-label-wrapper {
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.results-label-wrapper .results-label {
+  color: #a1a1a1;
+  font-size: .85rem;
+}
+
+.results-label-wrapper span {
+  display: inline-block;
+  width: 50%;
+  padding: 1rem 0;
+  border-bottom: 1px solid #24292e;
+}
+
+.market-details {
+  margin: 4rem auto;
+  text-align: left;
+}
+
+.market-details span {
+  display: inline-block;
+}
+
+.market-details .heading {
+  width: 50%;
+  font-weight: bold;
+  min-width: 200px;
+}
+
+.market-details .market-details-row {
+  margin: 1rem 0;
 }
 
 .flex-column {
@@ -153,5 +241,28 @@ ol, ul {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.entire-container {
+  padding: 1rem;
+}
+
+.entire-container .results-container {
+  padding: 0 1rem;
+}
+
+.entire-container .results-row {
+  padding: 1rem;
+  border-bottom: 1px solid #24292e;
+}
+
+.entire-container .results-row:last-child {
+  border-bottom: 0;
+}
+
+.entire-container .results-row .label {
+  font-weight: 400;
+  color: #a1a1a1;
+  font-size: .85rem;
 }
 /*# sourceMappingURL=style.css.map */

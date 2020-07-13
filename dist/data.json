@@ -1,0 +1,156 @@
+let text = '{"market":[' + '{"name":"NA","priceFormat":"NA" },' +
+
+'{"name":"Micro E-Mini Russel 2000","priceFormat":"1490.00", "contractSize":"$5 x index value", "minTick":"0.10", "tickValue":"0.50","pointValue":"1 / $5.00", "deliveryMonths":"H, M, U, Z"},' +
+
+'{"name":"Micro E-Mini NASDAQ-100", "priceFormat":"1130.00", "contractSize":"$2 x index value", "minTick":"0.25", "tickValue":"0.50", "pointValue":"1 / $2.00", "deliveryMonths":"H, M, U, Z"},' +
+
+'{"name":"Micro E-Mini S&P 500", "priceFormat":"2188.00", "contractSize":"$5 x index value", "minTick":"0.25", "tickValue":"1.25", "pointValue":"1 / $5.00", "deliveryMonths":"H, M, U, Z"},' +
+
+'{"name":"Micro E-Mini Dow", "priceFormat":"21500", "contractSize":"$0.50 x index value", "minTick":"1", "tickValue":"0.50", "pointValue":"1 / $0.50", "deliveryMonths":"H, M, U, Z"},' +
+
+'{"name":"E-mini S&P 500 (ES) - Globex", "priceFormat":"1200", "contractSize":"$50 x index value", "minTick":"0.25", "tickValue":"12.50", "pointValue":"1 / $50.00", "deliveryMonths":"H, M, U, Z"},' +
+
+'{"name":"E-mini Dow (YM) - Globex", "priceFormat":"10200", "contractSize":"$5 x index value", "minTick":"1", "tickValue":"5.00", "pointValue":"1 / $5.00", "deliveryMonths":"H, M, U, Z"},' +
+
+'{"name":"E-mini NASDAQ 100 (NQ) - Globex", "priceFormat":"1000", "contractSize":"$20 x index value", "minTick":"0.25", "tickValue":"5.00", "pointValue":"1 / $20.00", "deliveryMonths":"H, M, U, Z"},' +
+
+'{"name":"Russell 2000 Mini (RLM-M) - ICE", "priceFormat":"750", "contractSize":"$100 x index value", "minTick":"0.1", "tickValue":"5.00", "pointValue":"1 / $100.00", "deliveryMonths":"H, M, U, Z"},' +
+
+'{"name":"E-mini Russell 2000 Index (RTY)", "priceFormat":"1564.4", "contractSize":"$50 x index value", "minTick":"0.1", "tickValue":"5.00", "pointValue":"1 / $50.00", "deliveryMonths":"H, M, U, Z"},' +
+
+'{"name":"E-mini S&P MidCap 400 (EMD) - Globex", "priceFormat":"1314.9", "contractSize":"$100 x S&P MidCap 400 Index", "minTick":"0.1", "tickValue":"0.1", "pointValue":"$100.00 / $10.00", "deliveryMonths":"H, M, U, Z"},' +
+
+'{"name":"Nikkei 225/USD (NKD)", "priceFormat":"21180", "contractSize":"$5 x index value", "minTick":"5", "tickValue":"25.00", "pointValue":"1 / $5.00", "deliveryMonths":"H, M, U, Z"},' +
+
+//currencies 
+
+'{"name":"US Dollar Index (DX) - ICE", "priceFormat":"76.4", "contractSize":"$1000 x index value", "minTick":"0.005", "tickValue":"5.00", "pointValue":"1 / $1,000.00", "deliveryMonths":"H, M, U, Z"},' +
+
+'{"name":"Australian Dollar FX (6A) - Globex", "priceFormat":"0.654", "contractSize":"100,000 Australian dollars", "minTick":"0.0001", "tickValue":"10.00", "pointValue":"1 / $100,000.00", "deliveryMonths":"H, M, U, Z"},' +
+
+'{"name":"British Pound FX (6B) - Globex", "priceFormat":"1.254", "contractSize":"62,500 British pounds", "minTick":"0.0001", "tickValue":"6.25", "pointValue":"1 / $62,500.00", "deliveryMonths":"H, M, U, Z"},' +
+
+'{"name":"Canadian Dollar FX (6C) - Globex", "priceFormat":"0.754", "contractSize":"100,000 Canadian dollars", "minTick":"0.0001", "tickValue":"10.00", "pointValue":"1 / $100,000.00", "deliveryMonths":"H, M, U, Z"},' +
+
+'{"name":"Euro FX (6E) - Globex", "priceFormat":"1.48", "contractSize":"125,000 Euro", "minTick":"0.0001", "tickValue":"12.50", "pointValue":"1 / $125,000.00", "deliveryMonths":"H, M, U, Z"},' +
+
+'{"name":"Swiss Franc FX (6S) - Globex", "priceFormat":"0.548", "contractSize":"125,000 Swiss francs", "minTick":"0.0001", "tickValue":"12.50", "pointValue":"1 / $125,000.00", "deliveryMonths":"H, M, U, Z"},' +
+
+'{"name":"Japanese Yen FX (6J) - Globex", "priceFormat":"1.15", "contractSize":"12,500,000 Japanese yen", "minTick":"0.0001", "tickValue":"12.50","pointValue":"1 / $125,000.00", "deliveryMonths":"H, M, U, Z"},' +
+
+'{"name":"New Zealand Dollar (6N)", "priceFormat":"0.721", "contractSize":"100K NZD", "minTick":"0.0001", "tickValue":"10.00", "pointValue":"1 / $100,000.00", "deliveryMonths":"H, M, U, Z"},' +
+
+'{"name":"Mexican Peso (6M)", "priceFormat":"0.05121", "contractSize":"500K MXN", "minTick":"0.0001", "tickValue":"5.00", "pointValue":"1 / $500,000.00", "deliveryMonths":"All"},' +
+
+'{"name":"E-mini Euro FX (E7)", "priceFormat":"1.2251", "contractSize":"62.5K EUR", "minTick":"0.0001", "tickValue":"6.25", "pointValue":"1 / $62,500.00", "deliveryMonths":"H, M, U, Z"},' +
+
+'{"name":"E-micro Euro FX (M6E)", "priceFormat":"1.2209", "contractSize":"12.5K EUR", "minTick":"0.0001", "tickValue":"1.25", "pointValue":"1 / $12,500.00", "deliveryMonths":"H, M, U, Z"},' +
+
+'{"name":"E-mini Japanese Yen (J7)", "priceFormat":"0.009244", "contractSize":"6.25M JPY", "minTick":"0.000001", "tickValue":"6.25", "pointValue":"1 / $6,250,000.00", "deliveryMonths":"H, M, U, Z"},' +
+
+'{"name":"E-micro Japanese Yen (MJY)", "priceFormat":"0.009424", "contractSize":"1.25M JPY", "minTick":"0.000001", "tickValue":"1.25", "pointValue":"1 / $1,250,000.00", "deliveryMonths":"H, M, U, Z"},' +
+
+'{"name":"E-micro Swiss Franc (MSF)", "priceFormat":"1.047", "contractSize":"12.5 CHF", "minTick":"0.0001", "tickValue":"1.25", "pointValue":"1 / $12,500.00", "deliveryMonths":"H, M, U, Z"},' +
+
+'{"name":"E-micro Canadian Dollar (MCD)", "priceFormat":"0.7631", "contractSize":"10K CAD", "minTick":"0.0001", "tickValue":"1.00", "pointValue":"1 / $10,000.00", "deliveryMonths":"H, M, U, Z"},' +
+
+//energies 
+
+'{"name":"Crude Oil (CL) - NYMEX", "priceFormat":"77", "contractSize":"1000 barrels", "minTick":"0.01", "tickValue":"10.00", "pointValue":"1 / $1,000.00", "deliveryMonths":"ALL MONTHS"},' +
+
+'{"name":"E-mini Crude Oil (QM) - NYMEX", "priceFormat":"77", "contractSize":"500 barrels", "minTick":"0.025", "tickValue":"12.50", "pointValue":"1 / $500.00", "deliveryMonths":"ALL MONTHS"},' +
+
+'{"name":"RBOB Gasoline (RB) - NYMEX", "priceFormat":"2", "contractSize":"42,000 gallons", "minTick":"0.0001", "tickValue":"4.20", "pointValue":"1 / $42,000.00", "deliveryMonths":"ALL MONTHS"},' +
+
+'{"name":"Heating Oil (HO) - NYMEX", "priceFormat":"2", "contractSize":"42,000 gallons", "minTick":"0.0001", "tickValue":"4.20", "pointValue":"1 / $42,000.00", "deliveryMonths":"ALL MONTHS"},' +
+
+'{"name":"Natural Gas (NG) - NYMEX", "priceFormat":"6.1", "contractSize":"10,000 MBTU", "minTick":"0.001", "tickValue":"10.00", "pointValue":"1 / $10,000", "deliveryMonths":"ALL MONTHS"},' +
+
+'{"name":"E-mini Natural Gas (QG)", "priceFormat":"2.98", "contractSize":"2,500 mmBtu", "minTick":"0.005", "tickValue":"12.50", "pointValue":"1 / $2,500.00", "deliveryMonths":"ALL MONTHS"},' +
+
+'{"name":"E-Mini RBOB Gasoline (QU) - Globex", "priceFormat":"1.789", "contractSize":"21,000 gallons", "minTick":"0.0001", "tickValue":"12.00", "pointValue":"1 / $21,000.00", "deliveryMonths":"ALL"},' +
+
+'{"name":"E-Mini Heating Oil (QH) - Globex", "priceFormat":"1.812", "contractSize":"21,000 gallons", "minTick":"0.001", "tickValue":"21.00", "pointValue":"1 / $21,000.00", "deliveryMonths":"ALL"},' +
+
+//metals 
+
+'{"name":"Gold (GC) - COMEX", "priceFormat":"1812", "contractSize":"100 ounces", "minTick":"0.1", "tickValue":"10.00", "pointValue":"1 / $100.00", "deliveryMonths":"H, M, U, Z"},' +
+
+'{"name":"Silver (SI) - COMEX", "priceFormat":"18.5", "contractSize":"5000 ounces", "minTick":"0.005", "tickValue":"25.00", "pointValue":"1 / $5,000.00", "deliveryMonths":"F, H, K, N, U, Z"},' +
+
+'{"name":"Copper (HG) - COMEX", "priceFormat":"298.75", "contractSize":"25,000 lbs", "minTick":"0.05", "tickValue":"12.50", "pointValue":"$12.50 / $250.00", "deliveryMonths":"ALL MONTHS"},' +
+
+'{"name":"Platinum (GPL) - Globex", "priceFormat":"955.3", "contractSize":"50 ounces", "minTick":"0.1", "tickValue":"5.00", "pointValue":"1 / $50.00", "deliveryMonths":"F,J,N,V,Serial"},' +
+
+'{"name":"Palladium (GPA) - Globex", "priceFormat":"991.15", "contractSize":"100 ounces", "minTick":"0.05", "tickValue":"5.00", "pointValue":"1 / $100.00", "deliveryMonths":"H,M,U,Z,Serial"},' +
+
+'{"name":"E-Mini Gold (QO) - Globex", "priceFormat":"1312.25", "contractSize":"50 ounces", "minTick":"0.25", "tickValue":"5.00", "pointValue":"1 / $50.00", "deliveryMonths":"F,G,J,M,Q,V,Z"},' +
+
+'{"name":"Mini Gold (ZYG) - ICEx", "priceFormat":"112.25", "contractSize":"33.2 ounces", "minTick":"0.1", "tickValue":"3.32", "pointValue":"1 / $33.20", "deliveryMonths":"G,J,M,Q,V,Z,Serial"},' +
+
+'{"name":"E-Micro Gold (MGC) - Globex", "priceFormat":"1315.1", "contractSize":"10 ounces", "minTick":"0.1", "tickValue":"1.00", "pointValue":"1 / $10.00", "deliveryMonths":"G,J,M,Q,V,Z"},' +
+
+//Interest rates
+
+'{"name":"Eurodollar (GE) - Globex", "priceFormat":"99.7225", "contractSize":"$1,000,000", "minTick":"0.0025", "tickValue":"6.25", "pointValue":"1 / $2,500.00", "deliveryMonths":"H, M, U, Z"},' +
+
+'{"name":"US 30-Year Treasury Bonds (ZB) - Globex", "priceFormat":"118.29", "contractSize":"$100,000", "minTick":"0.03125", "tickValue":"31.25", "pointValue":"32/32 / $1,000.00", "deliveryMonths":"H, M, U, Z"},' +
+
+'{"name":"US 10-Year Treasury Notes (ZN) - Globex", "priceFormat":"118.29", "contractSize":"$100,000", "minTick":"0.015625", "tickValue":"15.63", "pointValue":"64/64 / $1,000.00", "deliveryMonths":"H, M, U, Z"},' +
+
+//this one has a weird value.  Revisit with Christian
+'{"name":"5 Year T-Note (ZF) - Globex", "priceFormat":"114 11.00", "contractSize":" ", "minTick":"0.015625", "tickValue":"15.63", "pointValue":"1 / $1,000.00", "deliveryMonths":"H, M, U, Z"},' +
+
+//Grains and oil Seeds
+
+'{"name":"Corn (ZC) - Globex", "priceFormat":"3.56", "contractSize":"5000 bushels", "minTick":"0.0025", "tickValue":"12.50", "pointValue":"1 / $5,000.00", "deliveryMonths":"H, K, N, U, Z"},' +
+
+'{"name":"Soybeans (ZS) - Globex", "priceFormat":"9.3", "contractSize":"5000 bushels", "minTick":"0.0025", "tickValue":"12.50", "pointValue":"1 / $5,000.00", "deliveryMonths":"F, H, K, N, Q, U, X"},' +
+
+'{"name":"Wheat (ZW) - Globex", "priceFormat":"4.85", "contractSize":"5000 bushels", "minTick":"0.0025", "tickValue":"12.50", "pointValue":"1 / $5,000.00", "deliveryMonths":"H, K, N, U, Z"},' +
+
+'{"name":"Soybean Meal (ZM) - Globex", "priceFormat":"275", "contractSize":"100 tons", "minTick":"0.1", "tickValue":"10.00", "pointValue":"1 / $100.00", "deliveryMonths":"F, H, K, N, Q, U, V, Z"},' +
+
+'{"name":"Soybean Oil (ZL) - Globex", "priceFormat":"0.3795", "contractSize":"60,000 lbs", "minTick":"0.0001", "tickValue":"6.00", "pointValue":"1 / $6,000.00", "deliveryMonths":"F, H, K, N, Q, U, V, Z"},' +
+
+'{"name":"Oats (ZO) - Globex", "priceFormat":"2.3", "contractSize":"5000 bushels", "minTick":"0.0025", "tickValue":"12.50", "pointValue":"1 / $5,000.00", "deliveryMonths":"H, K, N, U, Z"},' +
+
+'{"name":"Rough Rice (ZR) - Globex", "priceFormat":"14.3", "contractSize":"2000 cwt", "minTick":"0.005", "tickValue":"10.00", "pointValue":"1 / $2,000.00", "deliveryMonths":"F, H, K, N, U, X"},' +
+
+'{"name":"Kansas City Wheat (KE) - Globex", "priceFormat":"4.735", "contractSize":"5,000 bushels", "minTick":"0.0025", "tickValue":"12.50", "pointValue":"1 / $5,000.00", "deliveryMonths":"H,K,N,U,Z"},' +
+
+'{"name":"Minneapolis Wheat (MWE) - Globex", "priceFormat":"6.055", "contractSize":"1,000 bushels", "minTick":"0.0025", "tickValue":"12.50", "pointValue":"1 / $5,000.00", "deliveryMonths":"H,K,N,U,Z"},' +
+
+'{"name":"Mini Corn (XC) - Globex", "priceFormat":"3.7525", "contractSize":"5,000 bushels", "minTick":"0.000025", "tickValue":"1.25", "pointValue":"1 / $1,000.00", "deliveryMonths":"H,K,N,U,Z"},' +
+
+'{"name":"Mini Soybeans (XS) - Globex", "priceFormat":"10.23", "contractSize":"1,000 bushels", "minTick":"0.000025", "tickValue":"1.25", "pointValue":"1 / $1,000.00", "deliveryMonths":"H,K,N,U,Z"},' +
+
+'{"name":"Mini Wheat (XW) - Globex", "priceFormat":"4.685", "contractSize":"1,000 bushels", "minTick":"0.000025", "tickValue":"1.25", "pointValue":"1 / $1,000.00", "deliveryMonths":"H,K,N,U,Z"},' +
+
+'{"name":"Cocoa (CC) - ICE", "priceFormat":"3095", "contractSize":"10 metric tons (mt)", "minTick":"1", "tickValue":"10.00", "pointValue":"NA", "deliveryMonths":"H,K,N,U,Z"},' +
+
+'{"name":"Coffee (KC) - ICE", "priceFormat":"131.7", "contractSize":"37,500 lbs", "minTick":"0.05", "tickValue":"18.75", "pointValue":"1 / $375.00", "deliveryMonths":"H,K,N,U,Z"},' +
+
+'{"name":"Cotton (CT) - ICE", "priceFormat":"75.17", "contractSize":"50,000 lbs", "minTick":"0.01", "tickValue":"5.00", "pointValue":"1 / $500.00", "deliveryMonths":"H,K,N,U,Z"},' +
+
+'{"name":"Sugar (SB) - ICE", "priceFormat":"30", "contractSize":"112,000 lbs", "minTick":"0.01", "tickValue":"11.20", "pointValue":"1 / $1,120.00", "deliveryMonths":"H,K,N,U,Z"},' +
+
+'{"name":"Orange Juice (OJ) - ICE", "priceFormat":"137.9", "contractSize":"15,000 lbs", "minTick":"0.05", "tickValue":"7.50", "pointValue":"1 / $150.00", "deliveryMonths":"F, H, K, N, U, X"},' +
+
+'{"name":"Lumber (LB) - Globex", "priceFormat":"273", "contractSize":"110,000 bd ft", "minTick":"0.1", "tickValue":"11.00", "pointValue":"1 / $110.00", "deliveryMonths":"F, H, K, N, U, X"},' +
+
+//Softs
+'{"name":"Class III Milk (DA) - Globex", "priceFormat":"15.68", "contractSize":"200,000 pounds", "minTick":"0.1", "tickValue":"20.00", "pointValue":"1 / $2,000.00", "deliveryMonths":"ALL"},' +
+
+//Livestock
+'{"name":"Feeder Cattle (GF) - Globex", "priceFormat":"105", "contractSize":"50,000 lbs", "minTick":"0.025", "tickValue":"12.50", "pointValue":"1 / $500.00", "deliveryMonths":"F, H, J, K, Q, U, V, X"},' +
+
+'{"name":"Live Cattle (LE) - Globex", "priceFormat":"92.9", "contractSize":"40,000 lbs", "minTick":"0.025", "tickValue":"10.00", "pointValue":"1 / $400.00", "deliveryMonths":"G, J, M, Q, V, Z"},' +
+
+'{"name":"Lean Hogs (HE) - Globex", "priceFormat":"73.4", "contractSize":"40,000 lbs", "minTick":"0.025", "tickValue":"10.00", "pointValue":"1 / $400.00", "deliveryMonths":"G, J, K, M, N, Q, V, Z"},' +
+
+//bitcoin
+'{"name":"CFE Bitcoin Futures (XBT)", "priceFormat":"8450.01", "contractSize":"1 Bitcoin", "minTick":"10", "tickValue":"10.00", "pointValue":"1 / $1.00", "deliveryMonths":"H, M, U, Z"}]}';
+
+
+

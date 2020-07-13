@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <script src="calc-logic.js"></script>
   <title>Futures Market Calculator</title>
 </head>
@@ -12,34 +13,78 @@
 <section class="flex-column-to-row">
   <div class="calculator flex-row">
       <div class="calc-content">
-      <span id="minT"></span>
-      <span id="tickV"></span>
       
       <select id="select" onchange="selectFunction()">
-        <option>Select an option</option>
-        <option value="0.10">Micro E-Mini Russel 2000</option>
-        <option value="0.25">Micro E-Mini Nasdaq-100</option>
-        <option value="0.25">Micro E-Mini S&P 500</option>
-        <option value="1">Micro E-Mini Dow</option>
-        <option value=".25">E-mini S&P 500 (ES) - Globex</option>
-        <option value="1">E-mini Dow (YM) - Globex</option>
-        <option value=".25">E-mini NASDAQ 100 (NQ) - Globex</option>  
+        <option>Select a Market</option>
+        <optgroup label="Indices"></optgroup>
+          <option value="0.10">Micro E-Mini Russel 2000</option>
+          <option value="0.25">Micro E-Mini Nasdaq-100</option>
+          <option value="0.25">Micro E-Mini S&P 500</option>
+          <option value="1">Micro E-Mini Dow</option>
+          <option value=".25">E-mini S&P 500 (ES) - Globex</option>
+          <option value="1">E-mini Dow (YM) - Globex</option>
+          <option value=".25">E-mini NASDAQ 100 (NQ) - Globex</option>  
+          <option value="0.10">Russell 2000 Mini (RLM-M) - ICE</option>
+          <option value="0.10">E-mini Russell 2000 Index (RTY)</option>
+          <option value="0.10">E-mini S&P MidCap 400 (EMD) - Globex</option>
+          <option value="5">Nikkei 225/USD (NKD)</option>
       </select>
       
-      Entry Price (Buy) <input type="text" id="entryPrice"/>
-      Exit Price (Sell) <input type="text" id="exitPrice"/>
-      Number of contracts <input type="text" id="numContracts"/>
+      <span class="input-label">Entry Price (Buy)</span> <input type="text" id="entryPrice"/>
+      <span class="input-label">Exit Price (Sell)</span> <input type="text" id="exitPrice"/>
+      <span class="input-label">Number Of Contracts</span> <input type="text" id="numContracts"/>
         
       <input type="button" name="Sumbit" value="calculate" onclick="addNumbers()"/>
-
-      Ticks <span id="ticks"></span>
-      Points <span id="points"></span>
-      USD<span id="usd"></span>
+      <div class="results-container">
+        <div class="results-label-wrapper-heading flex-row">
+          <span class="results-label">Unit</span> 
+          <span id="amount">Amount</span>
+        </div>
+        <div class="results-label-wrapper flex-row">
+          <span class="results-label">Ticks</span> 
+          <span id="ticks"></span>
+        </div>
+        <div class="results-label-wrapper flex-row">
+          <span class="results-label">Points</span> 
+          <span id="points"></span>
+        </div>
+        <div class="results-label-wrapper flex-row">
+          <span class="results-label">USD</span>
+          <span id="usd"></span>
+        </div>
+      </div>
     </div>
   </div>
-    <div class="details">
-
-  </div>
+    <div class="details flex-row">
+      <div class="market-details">
+        <div class="market-details-row">
+          <span class="heading">Price Format Example</span>
+          <span>1490.00</span>
+        </div>
+        <div class="market-details-row">
+          <span class="heading">Contract Size</span>
+          <span>$5 x index value</span>
+        </div>
+        <div class="market-details-row">
+          <span class="heading">Minimum Tick Fluctuation/Value</span>
+          <span id="minT">1</span> /
+          <span id="tickV">2</span>
+        </div>
+        <div class="market-details-row">
+          <span class="heading">Point Value</span>
+          <span>1</span> /
+          <span>$5.00</span>
+        </div>
+        <div class="market-details-row">
+          <span class="heading">Margin requirements</span>
+          <span>Margin</span>
+        </div>
+        <div class="market-details-row">
+          <span class="heading">Delivery Months</span>
+          <span>H, M, U, Z</span>
+        </div>
+      </div>
+    </div>
 </section>
 </body>
 </html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="data.json"></script>
+  <script type="text/javascript" src="js.js"></script>
+  <title>Futures Calculator</title>
+</head>
+<body>
+  <div class="entire-container flex-column-to-row max-width">
+  <div class="calculator flex-6-12">
+    <select id="select" onchange="selectFunction()">
+      <option value=""> - Select a Market - </option>
+        <optgroup label="Indices">
+          <option>Micro E-Mini Russel 2000</option>
+          <option>Micro E-Mini NASDAQ-100</option>
+          <option>Micro E-Mini S&P 500</option>
+          <option>Micro E-Mini Dow</option>
+          <option>E-mini S&P 500 (ES) - Globex</option>
+          <option>E-mini Dow (YM) - Globex</option>
+          <option>E-mini NASDAQ 100 (NQ) - Globex</option>
+          <option>Russell 2000 Mini (RLM-M) - ICE</option>
+          <option>E-mini Russell 2000 Index (RTY)</option>
+          <option>E-mini S&P MidCap 400 (EMD) - Globex</option>
+          <option>Nikkei 225/USD (NKD)</option>
+        </optgroup>
+        <optgroup label="Currencies">
+          <option>US Dollar Index (DX) - ICE</option>
+          <option>Australian Dollar FX (6A) - Globex</option>
+          <option>British Pound FX (6B) - Globex</option>
+          <option>Canadian Dollar FX (6C) - Globex</option>
+          <option>Euro FX (6E) - Globex</option>
+          <option>Swiss Franc FX (6S) - Globex</option>
+          <option>Japanese Yen FX (6J) - Globex</option>
+          <option>New Zealand Dollar (6N)</option>
+          <option>Mexican Peso (6M)</option>
+          <option>E-mini Euro FX (E7)</option>
+          <option>E-micro Euro FX (M6E)</option>
+          <option>E-mini Japanese Yen (J7)</option>
+          <option>E-micro Japanese Yen (MJY)</option>
+          <option>E-micro Swiss Franc (MSF)</option>
+          <option>E-micro Canadian Dollar (MCD)</option>
+        </optgroup>
+        <optgroup label="Energies">
+          <option>Crude Oil (CL) - NYMEX</option>
+          <option>E-mini Crude Oil (QM) - NYMEX</option>
+          <option>RBOB Gasoline (RB) - NYMEX</option>
+          <option>Heating Oil (HO) - NYMEX</option>
+          <option>Natural Gas (NG) - NYMEX</option>
+          <option>E-mini Natural Gas (QG)</option>
+          <option>E-Mini RBOB Gasoline (QU) - Globex</option>
+          <option>E-Mini Heating Oil (QH) - Globex</option>
+        </optgroup>
+        <optgroup label="Metals">
+          <option>Gold (GC) - COMEX</option>
+          <option>Silver (SI) - COMEX</option>
+          <option>Copper (HG) - COMEX</option>
+          <option>Platinum (GPL) - Globex</option>
+          <option>Palladium (GPA) - Globex</option>
+          <option>E-Mini Gold (QO) - Globex</option>
+          <option>Mini Gold (ZYG) - ICE</option>
+          <option>E-Micro Gold (MGC) - Globex</option>
+        </optgroup>
+        <optgroup label="Interest Rates">
+          <option>Eurodollar (GE) - Globex</option>
+          <option>US 30-Year Treasury Bonds (ZB) - Globex</option>
+          <option>US 10-Year Treasury Notes (ZN) - Globex</option>
+          <option>5 Year T-Note (ZF) - Globex</option>
+        </optgroup>
+        <optgroup label="Grains and Oilseeds">
+          <option>Corn (ZC) - Globex</option>
+          <option>Soybeans (ZS) - Globex</option>
+          <option>Wheat (ZW) - Globex</option>
+          <option>Soybean Meal (ZM) - Globex</option>
+          <option>Soybean Oil (ZL) - Globex</option>
+          <option>Oats (ZO) - Globex</option>
+          <option>Rough Rice (ZR) - Globex</option>
+          <option>Kansas City Wheat (KE) - Globex</option>
+          <option>Minneapolis Wheat (MWE) - Globex</option>
+          <option>Mini Corn (XC) - Globex</option>
+          <option>Mini Soybeans (XS) - Globex</option>
+          <option>Mini Wheat (XW) - Globex</option>
+        </optgroup>
+        <optgroup label="Soft Markets">
+          <option>Cocoa (CC) - ICE</option>
+          <option>Coffee (KC) - ICE</option>
+          <option>Cotton (CT) - ICE</option>
+          <option>Sugar (SB) - ICE</option>
+          <option>Orange Juice (OJ) - ICE</option>
+          <option>Lumber (LB) - Globex</option>
+        </optgroup>
+        <optgroup label="Softs">
+          <option>Class III Milk (DA) - Globex</option>
+        </optgroup>
+        <optgroup label="Livestock">
+          <option>Feeder Cattle (GF) - Globex</option>
+          <option>Live Cattle (LE) - Globex</option>
+          <option>Lean Hogs (HE) - Globex</option>
+        </optgroup>
+        <optgroup label="Bitcoin">
+          <option>CFE Bitcoin Futures (XBT)</option>
+        </optgroup>
+    </select>
+
+    <span class="input-label">Entry Price (Buy)</span> <input type="text" id="entryPrice"/>
+    <span class="input-label">Exit Price (Sell)</span> <input type="text" id="exitPrice"/>
+    <span class="input-label">Number Of Contracts</span> <input type="text" id="numContracts"/>
+          
+    <input type="button" name="Sumbit" value="calculate" onclick="addNumbers()"/>
+
+    <div class="results-container">
+      <div class="flex-row results-row">
+        <span class="flex-6-12 label">Ticks</span> 
+        <span id="ticks" class="flex-6-12"></span>
+      </div>
+      <div class="flex-row results-row">
+        <span class="flex-6-12 label">Points</span> 
+        <span id="points" class="flex-6-12"></span>
+      </div>
+      <div class="flex-row results-row">
+        <span class="flex-6-12 label">USD</span>
+        <span id="usd" class="flex-6-12"></span>
+      </div>
+    </div>
+  </div>
+    <div class="details flex-6-12">
+      <p id="name"></p>
+      <p id="price-format"></p>
+      <p id="contract-size"></p>
+      <p id="min-tick"></p>
+      <p id="tick-value"></p>
+      <p id="point-value"></p>
+      <p id="delivery-months"></p>
+    </div>  
+  </div>
+</body>
+</html>

@@ -7,7 +7,7 @@ function addNumbers(){
 
   document.getElementById("ticks").innerHTML = (exit - entry) / mintick * contracts;
   document.getElementById("points").innerHTML = (exit - entry) * contracts;
-  document.getElementById("usd").innerHTML =  (exit - entry) / mintick * contracts * tickvalue;
+  document.getElementById("usd").innerHTML = '$' + (exit - entry) / mintick * contracts * tickvalue;
 }
 
 
@@ -27,6 +27,24 @@ function tickValue(){
    }
    if(tv === 5){
     document.getElementById("tickV").innerHTML = 12.50;
+   }
+   if(tv === 6){
+    document.getElementById("tickV").innerHTML = 5;
+   }
+   if(tv === 7){
+    document.getElementById("tickV").innerHTML = 5;
+   }
+   if(tv === 8){
+    document.getElementById("tickV").innerHTML = 5;
+   }
+   if(tv === 9){
+    document.getElementById("tickV").innerHTML = 5;
+   }
+   if(tv === 10){
+    document.getElementById("tickV").innerHTML = .10;
+   }
+   if(tv === 11){
+    document.getElementById("tickV").innerHTML = 25;
    }
 }
 
