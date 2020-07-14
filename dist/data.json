@@ -1,4 +1,4 @@
-let text = '{"market":[' + '{"name":"NA","priceFormat":"NA" },' +
+let text = '{"market":[' + '{"name":"NA","priceFormat":"NA" },' + 
 
 '{"name":"Micro E-Mini Russel 2000","priceFormat":"1490.00", "contractSize":"$5 x index value", "minTick":"0.10", "tickValue":"0.50","pointValue":"1 / $5.00", "deliveryMonths":"H, M, U, Z"},' +
 

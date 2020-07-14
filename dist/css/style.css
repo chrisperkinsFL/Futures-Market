@@ -150,6 +150,10 @@ img {
   padding: 0 1rem;
 }
 
+.entire-container .calculator {
+  width: 100%;
+}
+
 .entire-container select {
   font-size: 1.25rem;
   color: #F1F1F1;

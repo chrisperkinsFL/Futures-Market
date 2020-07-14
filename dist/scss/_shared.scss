@@ -1,0 +1,43 @@
+$tablet: 768px;
+$desktop: 992px;
+$oversized-desktop: 1440px;
+
+body{
+  font-family: 'Lato', sans-serif;
+  background: $alt-black;
+}
+
+h1{
+  font-size: calc(3rem + 1vw); 
+}
+
+a{
+  text-decoration: none;
+}
+
+.db{
+  display: block;
+}
+
+a:focus,
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+.max-width{
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+input,
+select{
+  display: block;
+  margin: 0 0 1rem;
+}
+
+span{
+  display: block;
+}
+
