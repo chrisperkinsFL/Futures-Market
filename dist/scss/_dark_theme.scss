@@ -1,23 +1,99 @@
 .entire-container{
   padding: 1rem;
+  align-items: flex-start;
   .results-container{
     padding: 0 1rem;
   }
-  .results-row{
-    padding: 1rem;
-    border-bottom: 1px solid #24292e;
-    &:last-child{
-      border-bottom: 0;
-    }
-    .label{
-      font-weight: 400;
-      color: $off-white;
-      font-size: .85rem;
-    }
+  //select styes
+  select{
+    font-size: 1.25rem;
+    color: $white;
+    border: 0;
+    width: 100%;
+    padding: 1rem .75rem;
+    background: $input-bg;
+    margin-bottom: 3rem;
   }
+
+  //input styles
+  input[type="text"]{
+    border:0;
+    padding: 1rem .75rem;
+    background: $input-bg;
+    color: $white;
+    width: 100%;
+    font-size: 1.25rem;
+  }
+  .input-label{
+    color: $off-white;
+    margin: .5rem 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .85rem;
+  }
+    input[type="button"]{
+      background: $red;
+      border: 0;
+      font-size: 1rem;
+      padding: 1rem;
+      width: 100%;
+      color: $white;
+      text-transform: uppercase;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 1rem 0 3rem;
+    }
+    
+    input[type="button"]:hover{
+      background:#df4534;
+    }
+
+    //output styles
+    .results-container{
+      background: $input-bg;
+    }
+    .results-row{
+      padding: 1rem;
+      border-bottom: 1px solid #24292e;
+      &:last-child{
+        border-bottom: 0;
+      }
+      .label{
+        color: #a1a1a1;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: .85rem;
+      }
+      #points,
+      #ticks,
+      #usd{
+        color: $white;
+      }
+    }
+
+    //market data (json data)
+    .details{
+      width: 100%;
+      padding: 0 1rem;
+      margin: 3rem 0 0;
+      background: $input-bg;
+      color: $off-white;
+      p{
+        padding: 1rem;
+      }
+      span{
+        display: inline-block;
+      }
+    }
+
   
   @media (min-width: $tablet){
-    
+    .details{
+      margin: 0 2vw;
+    }
+    .calculator{
+      margin: 0 2vw;
+    }
   }
   @media (min-width: $desktop){
           

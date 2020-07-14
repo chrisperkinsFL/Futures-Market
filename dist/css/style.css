@@ -37,108 +37,6 @@ span {
   display: block;
 }
 
-.details {
-  width: 50vw;
-}
-
-input[type="text"] {
-  border: 0;
-  padding: .75rem;
-  background: #2e3841;
-  color: #F1F1F1;
-  width: 100%;
-}
-
-.input-label {
-  margin: 0 0 .5rem;
-  font-weight: 400;
-  color: #a1a1a1;
-  font-size: .85rem;
-}
-
-input[type="button"] {
-  background: #EA5948;
-  border: 0;
-  padding: 1rem;
-  width: 100%;
-  color: #F1F1F1;
-  text-transform: uppercase;
-  font-weight: bold;
-  cursor: pointer;
-  margin: .5rem 0;
-}
-
-input[type="button"]:hover {
-  background: #df4534;
-}
-
-select {
-  background: #2e3841;
-  border: 0;
-  outline: 0;
-  padding: 1rem .5rem;
-  color: #F1F1F1;
-}
-
-optgroup {
-  font-size: 1rem;
-}
-
-.results-container {
-  margin: 3.5rem 0 0;
-  background: #2e3841;
-  color: #F1F1F1;
-}
-
-.results-label-wrapper-heading {
-  width: 100%;
-  background: #24292e;
-  padding: 1rem;
-  border: #2e3841 2px solid;
-}
-
-.results-label-wrapper-heading span {
-  width: 50%;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.results-label-wrapper {
-  width: 100%;
-  padding: 0 1rem;
-}
-
-.results-label-wrapper .results-label {
-  color: #a1a1a1;
-  font-size: .85rem;
-}
-
-.results-label-wrapper span {
-  display: inline-block;
-  width: 50%;
-  padding: 1rem 0;
-  border-bottom: 1px solid #24292e;
-}
-
-.market-details {
-  margin: 4rem auto;
-  text-align: left;
-}
-
-.market-details span {
-  display: inline-block;
-}
-
-.market-details .heading {
-  width: 50%;
-  font-weight: bold;
-  min-width: 200px;
-}
-
-.market-details .market-details-row {
-  margin: 1rem 0;
-}
-
 .flex-column {
   display: flex;
   flex-direction: column;
@@ -245,10 +143,59 @@ img {
 
 .entire-container {
   padding: 1rem;
+  align-items: flex-start;
 }
 
 .entire-container .results-container {
   padding: 0 1rem;
+}
+
+.entire-container select {
+  font-size: 1.25rem;
+  color: #F1F1F1;
+  border: 0;
+  width: 100%;
+  padding: 1rem .75rem;
+  background: #2e3841;
+  margin-bottom: 3rem;
+}
+
+.entire-container input[type="text"] {
+  border: 0;
+  padding: 1rem .75rem;
+  background: #2e3841;
+  color: #F1F1F1;
+  width: 100%;
+  font-size: 1.25rem;
+}
+
+.entire-container .input-label {
+  color: #a1a1a1;
+  margin: .5rem 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: .85rem;
+}
+
+.entire-container input[type="button"] {
+  background: #EA5948;
+  border: 0;
+  font-size: 1rem;
+  padding: 1rem;
+  width: 100%;
+  color: #F1F1F1;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 1rem 0 3rem;
+}
+
+.entire-container input[type="button"]:hover {
+  background: #df4534;
+}
+
+.entire-container .results-container {
+  background: #2e3841;
 }
 
 .entire-container .results-row {
@@ -261,8 +208,40 @@ img {
 }
 
 .entire-container .results-row .label {
-  font-weight: 400;
   color: #a1a1a1;
+  text-transform: uppercase;
+  font-weight: bold;
   font-size: .85rem;
+}
+
+.entire-container .results-row #points,
+.entire-container .results-row #ticks,
+.entire-container .results-row #usd {
+  color: #F1F1F1;
+}
+
+.entire-container .details {
+  width: 100%;
+  padding: 0 1rem;
+  margin: 3rem 0 0;
+  background: #2e3841;
+  color: #a1a1a1;
+}
+
+.entire-container .details p {
+  padding: 1rem;
+}
+
+.entire-container .details span {
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .entire-container .details {
+    margin: 0 2vw;
+  }
+  .entire-container .calculator {
+    margin: 0 2vw;
+  }
 }
 /*# sourceMappingURL=style.css.map */
