@@ -1,5 +1,4 @@
 //gets the current selection from the menu and grabs the data from the json file to display the data exmaple.
-
 function selectFunction(){
 	let tv = document.getElementById("select").selectedIndex;
     
@@ -17,8 +16,11 @@ function selectFunction(){
 //gets the user input values and calaculates the results. 
 
 function addNumbers(){
-  let tv = document.getElementById("select").selectedIndex;
-    
+
+  let tv = document.getElementById("select").selectedIndex; 
+  //create this variable to use in the if statement to figure out if it is supposed to be a bearish or bullish calc
+  let bullishBearish = document.getElementById("bullish-bearish").selectedIndex;
+
   obj = JSON.parse(text);
 
   let entry = parseInt(document.getElementById("entryPrice").value);
@@ -26,8 +28,20 @@ function addNumbers(){
   let contracts = parseInt(document.getElementById("numContracts").value);
   let mintick = document.getElementById("min-tick").innerHTML = obj.market[tv].minTick;
   let tickvalue = document.getElementById("tick-value").innerHTML = obj. market[tv].tickValue;
+  
+  if (bullishBearish == 0){
+    //bullish = if selectedIndex = 0 (i.e the default 'bullish in select menu) do this
+    let exitEntry = exit - entry;
 
-  document.getElementById("ticks").innerHTML = (exit - entry) / mintick * contracts;
-  document.getElementById("points").innerHTML = (exit - entry) * contracts;
-  document.getElementById("usd").innerHTML = '$' + (exit - entry) / mintick * contracts * tickvalue;
+    document.getElementById("ticks").innerHTML = (exitEntry) / mintick * contracts;
+    document.getElementById("points").innerHTML = (exitEntry) * contracts;
+    document.getElementById("usd").innerHTML = '$' + (exitEntry) / mintick * contracts * tickvalue;
+  }else{
+    //bearish = if selectedIndex = 1
+    let exitEntry = entry - exit;
+
+    document.getElementById("ticks").innerHTML = (exitEntry) / mintick * contracts;
+    document.getElementById("points").innerHTML = (exitEntry) * contracts;
+    document.getElementById("usd").innerHTML = '$' + (exitEntry) / mintick * contracts * tickvalue;
+  }    
 }

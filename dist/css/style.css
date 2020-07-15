@@ -161,7 +161,11 @@ img {
   width: 100%;
   padding: 1rem .75rem;
   background: #2e3841;
+}
+
+.entire-container #bullish-bearish {
   margin-bottom: 3rem;
+  font-size: 1rem;
 }
 
 .entire-container input[type="text"] {
@@ -246,6 +250,10 @@ img {
   }
   .entire-container .calculator {
     margin: 0 2vw;
+  }
+  .entire-container #bullish-bearish {
+    width: auto;
+    padding: .5rem 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

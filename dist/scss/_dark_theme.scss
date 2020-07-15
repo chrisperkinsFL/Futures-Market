@@ -15,7 +15,10 @@
     width: 100%;
     padding: 1rem .75rem;
     background: $input-bg;
+  }
+  #bullish-bearish{
     margin-bottom: 3rem;
+    font-size: 1rem;
   }
 
   //input styles
@@ -96,6 +99,10 @@
     }
     .calculator{
       margin: 0 2vw;
+    }
+    #bullish-bearish{
+      width: auto;
+      padding: .5rem 1rem;
     }
   }
   @media (min-width: $desktop){
