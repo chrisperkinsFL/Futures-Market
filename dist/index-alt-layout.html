@@ -10,7 +10,7 @@
 </head>
 <body>
   <div class="entire-container flex-column-to-row max-width">
-  <div class="calculator flex-8-12">
+  <div class="calculator flex-12-12">
     <select id="select" onchange="selectFunction()">
       <option value=""> - Select a Market - </option>
         <optgroup label="Indices">
@@ -114,7 +114,8 @@
     <span class="input-label">Number Of Contracts:</span> <input type="text" placeholder="ex. 10" id="numContracts"/>
           
     <input type="button" name="Sumbit" value="calculate" onclick="addNumbers()"/>
-
+  </div>
+</div>
     <div class="results-container">
       <div class="flex-row results-row">
         <span class="flex-6-12 label">Ticks</span> 
@@ -129,8 +130,7 @@
         <span id="usd" class="flex-6-12"></span>
       </div>
     </div>
-  </div>
-    <div class="details flex-4-12">
+    <div class="details flex-6-12">
       <div class="flex-row results-row">
         <span class="flex-5-12 label">Name</span>
         <span id="name" class="flex-7-12">E-mini S&P 500 (ES) - Globex</span>

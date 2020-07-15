@@ -164,22 +164,28 @@ img {
 }
 
 .entire-container #bullish-bearish {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   font-size: 1rem;
 }
 
 .entire-container input[type="text"] {
   border: 0;
-  padding: 1rem .75rem;
-  background: #2e3841;
+  padding: .75rem .75rem .25rem 0;
+  background: #24292e;
   color: #F1F1F1;
   width: 100%;
   font-size: 1.25rem;
+  border-bottom: 2px solid #2e3841;
+}
+
+.entire-container input::placeholder {
+  color: #2e3841;
+  font-size: .9rem;
 }
 
 .entire-container .input-label {
   color: #a1a1a1;
-  margin: .5rem 0;
+  margin: .5rem 0 0;
   text-transform: uppercase;
   font-weight: bold;
   font-size: .85rem;
@@ -195,7 +201,7 @@ img {
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
-  margin: 1rem 0 3rem;
+  margin: 2rem 0 3rem;
 }
 
 .entire-container input[type="button"]:hover {

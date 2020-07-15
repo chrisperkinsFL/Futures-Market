@@ -17,22 +17,28 @@
     background: $input-bg;
   }
   #bullish-bearish{
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     font-size: 1rem;
   }
 
   //input styles
   input[type="text"]{
     border:0;
-    padding: 1rem .75rem;
-    background: $input-bg;
+    padding: .75rem .75rem .25rem 0;
+    //background: $input-bg;
+    background: $alt-black;
     color: $white;
     width: 100%;
     font-size: 1.25rem;
+    border-bottom: 2px solid $input-bg;
+  }
+  input::placeholder{
+    color: $input-bg;
+    font-size: .9rem;
   }
   .input-label{
     color: $off-white;
-    margin: .5rem 0;
+    margin: .5rem 0 0;
     text-transform: uppercase;
     font-weight: bold;
     font-size: .85rem;
@@ -47,7 +53,7 @@
       text-transform: uppercase;
       font-weight: bold;
       cursor: pointer;
-      margin: 1rem 0 3rem;
+      margin: 2rem 0 3rem;
     }
     
     input[type="button"]:hover{
