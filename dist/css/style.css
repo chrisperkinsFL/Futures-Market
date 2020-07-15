@@ -181,6 +181,7 @@ img {
 .entire-container input::placeholder {
   color: #2e3841;
   font-size: .9rem;
+  font-weight: bold;
 }
 
 .entire-container .input-label {
@@ -260,6 +261,9 @@ img {
   .entire-container #bullish-bearish {
     width: auto;
     padding: .5rem 1rem;
+  }
+  .entire-container input[type="button"] {
+    width: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */

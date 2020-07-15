@@ -35,6 +35,7 @@
   input::placeholder{
     color: $input-bg;
     font-size: .9rem;
+    font-weight: bold;
   }
   .input-label{
     color: $off-white;
@@ -109,6 +110,9 @@
     #bullish-bearish{
       width: auto;
       padding: .5rem 1rem;
+    }
+    input[type="button"]{
+      width: auto;
     }
   }
   @media (min-width: $desktop){
