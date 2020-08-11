@@ -33,15 +33,27 @@ function addNumbers(){
     //bullish = if selectedIndex = 0 (i.e the default 'bullish in select menu) do this
     let exitEntry = exit - entry;
 
-    document.getElementById("ticks").innerHTML = (exitEntry) / mintick * contracts;
-    document.getElementById("points").innerHTML = exitEntry * contracts;
-    document.getElementById("usd").innerHTML = '$' + (exitEntry) / mintick * contracts * tickvalue;
+    //created these const to format the number output with commas for bullish
+    const formatter = new Intl.NumberFormat('en');
+    const usdBullish = (exitEntry) / mintick * contracts * tickvalue;
+    const pointsBullish = exitEntry * contracts;
+    const ticksBullish = (exitEntry) / mintick * contracts;
+
+    document.getElementById("ticks").innerHTML = formatter.format(ticksBullish);
+    document.getElementById("points").innerHTML = formatter.format(pointsBullish);
+    document.getElementById("usd").innerHTML = '$' + formatter.format(usdBullish);
   }else{
     //bearish = if selectedIndex = 1
     let exitEntry = entry - exit;
+    
+    //created these const to format the number output with commas for bearish
+    const formatter = new Intl.NumberFormat('en');
+    const usdBearish = (exitEntry) / mintick * contracts * tickvalue;
+    const pointsBearish = exitEntry * contracts;
+    const ticksBearish = (exitEntry) / mintick * contracts;
 
-    document.getElementById("ticks").innerHTML = (exitEntry) / mintick * contracts;
-    document.getElementById("points").innerHTML = exitEntry * contracts;
-    document.getElementById("usd").innerHTML = '$' + (exitEntry) / mintick * contracts * tickvalue;
+    document.getElementById("ticks").innerHTML = formatter.format(ticksBearish);
+    document.getElementById("points").innerHTML = formatter.format(pointsBearish);
+    document.getElementById("usd").innerHTML = '$' + formatter.format(usdBearish);
   }    
 }
